@@ -1,25 +1,31 @@
 import math
 
 # input 
-A = input()
-B = input()
-E = input()
+a = float(input())
+b = float(input())
+e = float(input())
 
 
 #def for func
 def f(x):
- return math.exp(-x)-(0,5*math.sin(x)^2)
+ return math.exp(-x)-(math.sin(x)**2)/2
 
 
-#from block diagram
+x=a
+while ((b-a) > e):
 
-while ((A-B)<E):
-    X = (A+B)/2
-    if ():
-        B = X
+    x = (a+b)/2
+
+    if (f(x) == 0):
+        break
+
+    if (f(x)*f(a) < 0):
+        b = x
     else:
-        A = X
+        a = x
+            
+print("Корень равен: {x}", x)
 
-print(X)
+print(x)
 
 
