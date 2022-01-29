@@ -1,3 +1,5 @@
+import math
+
 #функция
 def F(x):
     return 0.1*math.pow(x,2)-x*math.log(x)
@@ -16,4 +18,4 @@ def Method(a,b):
         xn1=xn-F(xn)/F1(xn)
     return xn1
 
-Print(Method(input(), input()))
+print(Method(float(input()), float(input())))
