@@ -9,7 +9,7 @@ def F(x):
 def F1(x):
     return 0.2*x-math.log(x)-1
  
- 
+ #сам метод
 def Method(a,b):
     x0=(a+b)/2
     xn=F(x0)
