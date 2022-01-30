@@ -25,7 +25,7 @@ def half_division_method(a,b,e):
         else:
             a = x
     
-    print("%.3f" % (x) )   
+    print("Найден корень: %.3f" % (x) )   
 
 
 #отделение корней
