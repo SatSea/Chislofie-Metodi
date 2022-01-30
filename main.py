@@ -24,6 +24,8 @@ def half_division_method(a,b,e):
             b = x
         else:
             a = x
+    
+    print("%.3f" % (x) )   
 
 
 #отделение корней
@@ -36,17 +38,14 @@ def root_separation(a,b,e):
         while(x2 < b):
             y2 = f(x2)
             if (y1 * y2 <= 0):
-                half_division_metho(a,b,0.0001)
+                half_division_method(a,b,0.0001)
                 count += 1
             x1 = x2
             x2 = x1 + e
             y1 = y2
-        print(f"Поиск завершен\nНайдено {count} корней")
+        print(f"Поиск завершен \nНайдено {count} корней")
     except:
         print("Что-то пошло не так" )
 
 
-print("Корень равен: {x}", root_separation(a,b,e))
-
-
-
+root_separation(a,b,e)

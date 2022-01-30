@@ -1,24 +1,28 @@
 import math
 
+# input 
+a = float(input()) # lower interval
+b = float(input()) # higher interval
+e = float(input()) # accuracy
 
 #функция
-def F(x):
-    return 0.1*math.pow(x,2)-x*math.log(x)
+def f(x):
+    return math.exp(-x)-(math.sin(x)**2)/2
  
 
 #производная
-def F1(x):
-    return 0.2*x-math.log(x)-1
+def f1(x):
+    return -(math.exp(-x))-math.sin(2*x)/2
 
 
 #сам метод
 def Method(a,b,e):
     x0=(a+b)/2 
-    xn=F(x0)
-    xn1=xn-F(xn)/F1(xn)
+    xn=f(x0)
+    xn1=xn-f(xn)/f1(xn)
     while abs(xn1-xn)>e:
         xn=xn1 
-        xn1=xn-F(xn)/F1(xn)
+        xn1=xn-f(xn)/f1(xn)
     print(f"Найден корень %.4f с погрешностью {e}" % xn1)
 
 
@@ -41,4 +45,4 @@ def root_separation(a,b,e):
     except:
         print("Что-то пошло не так" )
 
-print("Корень равен: {x}", root_separation(a,b,e))
+root_separation(a,b,e)
