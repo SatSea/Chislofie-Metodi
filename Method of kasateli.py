@@ -1,5 +1,4 @@
 import math
-import numpy as np
 
 
 #функция
@@ -20,17 +19,26 @@ def Method(a,b,e):
     while abs(xn1-xn)>e:
         xn=xn1 
         xn1=xn-F(xn)/F1(xn)
-    return xn1
+    print(f"Найден корень %.4f с погрешностью {e}" % xn1)
 
 
 #отделение корней
 def root_separation(a,b,e):
+    count = 0
     try:
-        interval = np.linspace(a, b, e)
-        for x in interval:
-            if f(x) * f(y) > 0: # если на отрезке нет корня, смотрим следующий
-                Method(a,b,e)
+        x1 = a
+        x2 = x1 + e
+        y1 = f(x1)
+        while(x2 < b):
+            y2 = f(x2)
+            if (y1 * y2 <= 0):
+                Method(a,b,0.0001)
+                count += 1
+            x1 = x2
+            x2 = x1 + e
+            y1 = y2
+        print(f"Поиск завершен\nНайдено {count} корней")
     except:
-        print("Что-то пошло не так {}", )
+        print("Что-то пошло не так" )
 
 print("Корень равен: {x}", root_separation(a,b,e))

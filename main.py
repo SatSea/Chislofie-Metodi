@@ -28,13 +28,22 @@ def half_division_method(a,b,e):
 
 #отделение корней
 def root_separation(a,b,e):
-    aVal=f(a)
-    bVal=f(b)
-    if (aVal>0 and bVal<0) or (aVal<0 and bVal>0):
-        return Method(b,a,e)
-    else:
-        print("Что-то пошло не так")
-        return 1
+    count = 0
+    try:
+        x1 = a
+        x2 = x1 + e
+        y1 = f(x1)
+        while(x2 < b):
+            y2 = f(x2)
+            if (y1 * y2 <= 0):
+                half_division_metho(a,b,0.0001)
+                count += 1
+            x1 = x2
+            x2 = x1 + e
+            y1 = y2
+        print(f"Поиск завершен\nНайдено {count} корней")
+    except:
+        print("Что-то пошло не так" )
 
 
 print("Корень равен: {x}", root_separation(a,b,e))
