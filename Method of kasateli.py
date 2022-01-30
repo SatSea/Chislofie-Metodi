@@ -1,4 +1,5 @@
 import math
+import numpy as np
 
 
 #функция
@@ -24,9 +25,12 @@ def Method(a,b,e):
 
 #отделение корней
 def root_separation(a,b,e):
-    aVal=f(a)
-    bVal=f(b)
-    if (aVal>0 and bVal<0) or (aVal<0 and bVal>0):
-        return Method(b,a,e)
-    else:
-        return 0
+    try:
+        interval = np.linspace(a, b, e)
+        for x in interval:
+            if f(x) * f(y) > 0: # если на отрезке нет корня, смотрим следующий
+                Method(a,b,e)
+    except:
+        print("Что-то пошло не так {}", )
+
+print("Корень равен: {x}", root_separation(a,b,e))

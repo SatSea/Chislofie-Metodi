@@ -24,8 +24,20 @@ def half_division_method(a,b,e):
             b = x
         else:
             a = x
-            
-print("Корень равен: {x}", half_division_method(a,b,e))
+
+
+#отделение корней
+def root_separation(a,b,e):
+    aVal=f(a)
+    bVal=f(b)
+    if (aVal>0 and bVal<0) or (aVal<0 and bVal>0):
+        return Method(b,a,e)
+    else:
+        print("Что-то пошло не так")
+        return 1
+
+
+print("Корень равен: {x}", root_separation(a,b,e))
 
 
 
