@@ -36,7 +36,7 @@ def root_separation(a,b,e):
         y2 = f(x2)
         if (y1 * y2 <= 0):
             print(a+" "+b)
-            Method(a,b,0.0001)
+            Method(x1,x2,0.0001)
             count += 1
         x1 = x2
         x2 = x1 + e
