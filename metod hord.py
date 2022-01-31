@@ -14,17 +14,17 @@ def Method(a, b):
         xn = F(x0)
         xn1 = xn - F(xn) / F1(xn)
         while abs(xn1 - xn) > math.pow(10, -5):
-            xn = xn1 # вот так надо было
+            xn = xn1 
             xn1 = xn - F(xn) / F1(xn)
             print(xn1)
         return xn1
     except ValueError:
-        print("Значение не аннулируется")
+        print("Значение не получилось")
 
-if name == 'main':
-    x=float(input())
-    a=float(input())
-    b=float(input())
-    F(x)
-    F1(x)
-    Method(a, b)
+
+x=float(input())
+a=float(input())
+b=float(input())
+F(x)
+F1(x)
+Method(a, b)
