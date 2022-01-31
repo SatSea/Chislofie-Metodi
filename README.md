@@ -2,7 +2,7 @@
 
 Примерная реализация заданий численных методов на языке Python :snake:
 
-:monkey: Code done by:  @SatSea :whale:
+:monkey: Code done by:  @SatSea :frog:
 
 :panda_face: Reviewed by:  @SashaGHT :swan:
 
