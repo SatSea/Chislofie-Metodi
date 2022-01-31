@@ -6,10 +6,10 @@ Code done by:  @SatSea
 
 Reviewed by:  @SashaGHT
 
-Ukradeno by: @kennyass359
-
 > Теперь по банке пива за это 😏
 
+
+Ukradeno by: @kennyass359
 
 TODO:
 - [x] **Метод половинного деления** 🐌
