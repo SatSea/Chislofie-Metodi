@@ -1,17 +1,18 @@
-# Chislofie-Metodi
+# :dragon: Chislofie-Metodi :dragon:
 
-Примерная реализация заданий численных методов на языке Python
+Примерная реализация заданий численных методов на языке Python :snake:
 
-Code done by:  @SatSea
+:monkey: Code done by:  @SatSea :frog:
 
-Reviewed by:  @SashaGHT
+:panda_face: Reviewed by:  @SashaGHT :swan:
 
 > Теперь по банке пива за это 😏
 
+:trollface::trollface::trollface:
 
 Ukradeno by: @kennyass359
 
 TODO:
 - [x] **Метод половинного деления** 🐌
 - [x] **Метод касательных** 🐸
-- [ ] **Метод хорд** 🪱
+- [ ] **Метод хорд** :ant:
