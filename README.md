@@ -6,6 +6,8 @@ Code done by:  @SatSea
 
 Reviewed by:  @SashaGHT
 
+Ukradeno by: @kennyass359
+
 > Теперь по банке пива за это 😏
 
 
