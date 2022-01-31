@@ -4,7 +4,7 @@
 
 :monkey: Code done by:  @SatSea :whale:
 
-:panda_face: Reviewed by:  @SashaGHT :shipit:
+:panda_face: Reviewed by:  @SashaGHT :swan:
 
 > Теперь по банке пива за это 😏
 
