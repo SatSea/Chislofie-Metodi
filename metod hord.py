@@ -19,7 +19,7 @@ xn1 = xn - F(xn) / F1(xn)
 print(xn1)
 return xn1
 except ValueError:
-print("Value not invalidate")
+print("Значение не аннулируется")
 
 if name == 'main':
 x=float(input())
