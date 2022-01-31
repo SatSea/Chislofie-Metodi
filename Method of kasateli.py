@@ -21,7 +21,7 @@ def Method(a,b,e):
     xn=f(x0)
     xn1=xn-f(xn)/f1(xn)
     while abs(xn1-xn)>e:
-        xn=xn1 
+        xn=xn1
         xn1=xn-f(xn)/f1(xn)
     print(f"Найден корень %.4f с погрешностью {e}" % xn1)
 
@@ -29,20 +29,18 @@ def Method(a,b,e):
 #отделение корней
 def root_separation(a,b,e):
     count = 0
-    try:
-        x1 = a
+    x1 = a
+    x2 = x1 + e
+    y1 = f(x1)
+    while(x2 < b):
+        y2 = f(x2)
+        if (y1 * y2 <= 0):
+            print(a+" "+b)
+            Method(a,b,0.0001)
+            count += 1
+        x1 = x2
         x2 = x1 + e
-        y1 = f(x1)
-        while(x2 < b):
-            y2 = f(x2)
-            if (y1 * y2 <= 0):
-                Method(a,b,0.0001)
-                count += 1
-            x1 = x2
-            x2 = x1 + e
-            y1 = y2
-        print(f"Поиск завершен\nНайдено {count} корней")
-    except:
-        print("Что-то пошло не так" )
+        y1 = y2
+    print(f"Поиск завершен\nНайдено {count} корней")
 
 root_separation(a,b,e)
