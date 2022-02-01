@@ -13,12 +13,21 @@ def f1(x):
 def f2(x):
     return math.exp(x)-math.cos(2*x)
 
-def Method(x1, x2, e):
+def Method(x0, x2, e):
     try:
-        x1  = x0 - fx(x0) / dfx(x0); 
-        while (abs(x1 - x0) > e):
-            x0 = x1
-            x1 = x0 - fx(x0) / dfx(x0)
+        print(f(x0)*f2(x0))
+        if  (f(x0)*f2(x0)>0):
+            x  = x0 - f(x0) / f1(x0); 
+            while (abs(x - x0) > e):
+                x0 = x
+                x = x0 - f(x0) / f1(x0)
+            print("Корень равен: %.3f" % x)
+        else:
+            x  = x2 - f(x2) / f1(x2); 
+            while (abs(x - x2) > e):
+                x2 = x
+                x = x2 - f(x2) / f1(x2)
+            print("Корень равен: %.3f" % x)
     except ValueError:
         print("Значение не получилось")
 
