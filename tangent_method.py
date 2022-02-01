@@ -1,9 +1,13 @@
 import math
 
 # input 
-a = float(input()) # lower interval
-b = float(input()) # higher interval
-e = float(input()) # accuracy
+# a = float(input()) # lower interval
+# b = float(input()) # higher interval
+# e = float(input()) # accuracy
+
+a = -2
+b = 5
+e = 0.5
 
 #функция
 def f(x):
@@ -17,13 +21,10 @@ def f1(x):
 
 #сам метод
 def Method(a,b,e):
-    x0=(a+b)/2 
-    xn=f(x0)
-    xn1=xn-f(xn)/f1(xn)
-    while abs(xn1-xn)>e:
-        xn=xn1
-        xn1=xn-f(xn)/f1(xn)
-    print(f"Найден корень %.4f с погрешностью {e}" % xn1)
+    while(abs(b - a) > e):
+        a = b - (b - a) * f(b) / (f(b) - f(a))
+        b = a - (a - b) * f(a) / (f(a) - f(b))
+    print(f"Найден корень %.4f с погрешностью {e}" % b)
 
 
 #отделение корней
@@ -35,7 +36,7 @@ def root_separation(a,b,e):
     while(x2 < b):
         y2 = f(x2)
         if (y1 * y2 <= 0):
-            print(a+" "+b)
+            print(str(a)+" "+str(b))
             Method(x1,x2,0.0001)
             count += 1
         x1 = x2
