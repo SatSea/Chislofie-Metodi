@@ -9,23 +9,26 @@ def f(x):
 def f1(x):
     return -(math.exp(-x))-math.sin(2*x)/2
 
+#производная второго порядка
+def f2(x):
+    return math.exp(x)-math.cos(2*x)
 
-def Method(a, b, e):
+def Method(x1, x2, e):
     try:
-        x0 = (a + b) / 2
-        xn = f(x0)
-        xn1 = xn - f(xn) / f1(xn)
-        while abs(xn1 - xn) > e:
-            xn = xn1 
-            xn1 = xn - f(xn) / f1(xn)
-        print("Корень равен: %.3f" % xn1)
+        x1  = x0 - fx(x0) / dfx(x0); 
+        while (abs(x1 - x0) > e):
+            x0 = x1
+            x1 = x0 - fx(x0) / dfx(x0)
     except ValueError:
         print("Значение не получилось")
 
 
-a=float(input())
-b=float(input())
-e=float(input())
+# a=float(input())
+# b=float(input())
+# e=float(input())
+a = -2
+b = 5
+e = 0.5
 
 def root_separation(a,b,e):
     count = 0
