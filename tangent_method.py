@@ -1,5 +1,8 @@
 import math
 
+global otvet
+otvet = ""
+
 # input 
 # a = float(input()) # lower interval
 # b = float(input()) # higher interval
@@ -24,7 +27,7 @@ def Method(a,b,e):
     while(abs(b - a) > e):
         a = b - (b - a) * f(b) / (f(b) - f(a))
         b = a - (a - b) * f(a) / (f(a) - f(b))
-    print(f"Найден корень %.4f с погрешностью {e}" % b)
+    otvet += ("Корень равен: %.3f\n" % x)
 
 
 #отделение корней
@@ -42,6 +45,6 @@ def root_separation(a,b,e):
         x1 = x2
         x2 = x1 + e
         y1 = y2
-    print(f"Поиск завершен\nНайдено {count} корней")
+    print(f"Поиск завершен\nНайдено {count} корней\n" + otvet[:-2])
 
 root_separation(a,b,e)

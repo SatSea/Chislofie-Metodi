@@ -1,5 +1,8 @@
 import math
 
+global otvet
+otvet = ""
+
 # input 
 a = float(input()) # lower interval
 b = float(input()) # higher interval
@@ -22,7 +25,7 @@ def half_division_method(a,b,e):
         else:
             a = x
     
-    print("Найден корень: %.3f" % (x) )   
+    otvet += ("Корень равен: %.3f\n" % x)   
 
 
 #отделение корней
@@ -42,7 +45,7 @@ def root_separation(a,b,h):
             x1 = x2
             x2 = x1 + h
             y1 = y2
-        print(f"Поиск завершен \nНайдено {count} корней")
+        print(f"Поиск завершен\nНайдено {count} корней\n" + otvet[:-2])
     except:
         print("Что-то пошло не так" )
 
