@@ -52,7 +52,7 @@ def root_separation(a, b, e):
         x1 = x2
         x2 = x1 + e
         y1 = y2
-    print(f"Поиск завершен\nНайдено {count} корней\n" + otvet[:-2])
+    print(f"Поиск завершен\nНайдено {count} корней\n" + otvet[:-1])
 
 
 # a=float(input())

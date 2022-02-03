@@ -16,6 +16,7 @@ def f(x):
 
 def half_division_method(a,b,e):
     x=a
+    global otvet
     while ((b-a) > e):
         x = (a+b)/2
         if (f(x) == 0):
@@ -45,7 +46,7 @@ def root_separation(a,b,h):
             x1 = x2
             x2 = x1 + h
             y1 = y2
-        print(f"Поиск завершен\nНайдено {count} корней\n" + otvet[:-2])
+        print(f"Поиск завершен\nНайдено {count} корней\n" + otvet[:-1])
     except:
         print("Что-то пошло не так" )
 

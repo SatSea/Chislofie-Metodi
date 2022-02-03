@@ -24,10 +24,11 @@ def f1(x):
 
 #сам метод
 def Method(a,b,e):
+    global otvet
     while(abs(b - a) > e):
         a = b - (b - a) * f(b) / (f(b) - f(a))
         b = a - (a - b) * f(a) / (f(a) - f(b))
-    otvet += ("Корень равен: %.3f\n" % x)
+    otvet += ("Корень равен: %.3f\n" % b)
 
 
 #отделение корней
@@ -39,12 +40,11 @@ def root_separation(a,b,e):
     while(x2 < b):
         y2 = f(x2)
         if (y1 * y2 <= 0):
-            print(str(a)+" "+str(b))
             Method(x1,x2,0.0001)
             count += 1
         x1 = x2
         x2 = x1 + e
         y1 = y2
-    print(f"Поиск завершен\nНайдено {count} корней\n" + otvet[:-2])
+    print(f"Поиск завершен\nНайдено {count} корней\n" + otvet[:-1])
 
 root_separation(a,b,e)
