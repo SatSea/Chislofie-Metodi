@@ -1,6 +1,20 @@
 # :dragon: Chislofie-Metodi :dragon:
 
-Ну и ну, половина файлов исчезла
+Примерная реализация заданий численных методов на языке Python :snake:
 
-[Все идет по плану](https://github.com/SatSea/Chislofie-Metodi/pull/10)
+:monkey: Code done by:  @SatSea :frog:
+
+:panda_face: Reviewed by:  @SashaGHT :swan:
+
+> Теперь по банке пива за это 😏
+
+:trollface::trollface::trollface:
+
+Ukradeno by: @kennyass359
+
+TODO:
+- [x] **Метод половинного деления** 🐌
+- [x] **Метод касательных** 🐸
+- [x] **Метод хорд** :ant:
+
 
