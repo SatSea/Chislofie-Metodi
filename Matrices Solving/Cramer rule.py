@@ -26,17 +26,17 @@ def Cramer():
     return reply
     
 
-def Matrix ( x,y ): 
+def Matrix ( x,y ):
+    print("Введите матрицу")
     matrix = [] 
     for x in range(x): 
         matrix.append([int(y) for y in input().split()])
     return matrix
 
 def main():
-    print("Введите матрицу")
     #matrix = Matrix(3,3)
-    #matrix = [[1,-4,-2,-3],[3,1,1,5],[3,-5,-6,-9]]
-    matrix = [[2,3,-1,4],[1,1,3,5],[3,-4,1,0]]
+    matrix = [[1,-4,-2,-3],[3,1,1,5],[3,-5,-6,-9]]
+    #matrix = [[2,3,-1,4],[1,1,3,5],[3,-4,1,0]]
     divider(matrix)
     Cramer()
 
