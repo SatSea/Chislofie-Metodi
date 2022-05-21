@@ -11,7 +11,11 @@ def trap(a,b,h):
 def function(x):
     return math.cos(x)-12*(x**3)
 
-def test(): 
-    print("Ответ равен: "+str(trap(0,math.pi,0.0001)))
+def main():
+    a = float(input("Введите нижний интервал: "))
+    b = float(input("Введите верхний интервал: "))
+    n = float(input("Введите количество точек: "))
+    print("Ответ равен: " + str(trap(a,b,(b-a)/(n-1))))
 
-test()
+if(__name__ == "__main__"):
+    main()
