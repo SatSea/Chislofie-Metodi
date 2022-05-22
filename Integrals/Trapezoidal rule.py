@@ -1,9 +1,10 @@
 import math
  
-def trap(a,b,h):
+def trap(a,b,n):
+    h=(b-a)/(n-1)
     s=0.5*(function(a)+function(b))
     x=a+h
-    while (x<=b-h):
+    while (x<b):
         s+=function(x)
         x+=h
     return h*s
@@ -15,7 +16,7 @@ def main():
     a = float(input("Введите нижний интервал: "))
     b = float(input("Введите верхний интервал: "))
     n = float(input("Введите количество точек: "))
-    print("Ответ равен: " + str(trap(a,b,(b-a)/(n-1))))
+    print("Ответ равен: " + str(trap(a,b,n)))
 
 if(__name__ == "__main__"):
     main()

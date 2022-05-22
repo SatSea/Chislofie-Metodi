@@ -5,11 +5,11 @@ def function(x): return math.cos(x)-12*(x**3)
 def rect(a,b,h):
     i=a
     sumL, sumR = 0,0
-    while(i<b-h):
+    while(i<b):
         sumL += function(i)
         i+=h
-    i=a
-    while(i<b+h):
+    i=a+h
+    while(i<=b):
         sumR += function(i)
         i+=h
     resL = sumL*h
