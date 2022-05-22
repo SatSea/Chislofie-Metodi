@@ -46,16 +46,16 @@ def Gauss():
     print( "\n".join("X{0} =\t{1:6.2f}".format(i+1,x) for i,x in enumerate(X)) )
     
 
-def Matrix ( x,y ): 
+def Matrix ( x,y ):
+    print("Введите матрицу")
     matrix = [] 
     for x in range(x): 
         matrix.append([int(y) for y in input().split()])
     return matrix
 
 def main():
-    print("Введите матрицу")
-    matrix = Matrix(3,3)
-    #matrix = [[1,-4,-2,-3],[3,1,1,5],[3,-5,-6,-9]]
+    #matrix = Matrix(3,3)
+    matrix = [[1,-4,-2,-3],[3,1,1,5],[3,-5,-6,-9]]
     divider(matrix)
 
 
