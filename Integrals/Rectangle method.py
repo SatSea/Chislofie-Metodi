@@ -2,7 +2,8 @@ import math
 
 def function(x): return math.cos(x)-12*(x**3)
 
-def rect(a,b,h):
+def rect(a,b,n):
+    h=(b-a)/(n-1)
     i=a
     sumL, sumR = 0,0
     while(i<b):
@@ -17,10 +18,8 @@ def rect(a,b,h):
     print(f"По левому прямоугольнику: {resL} \n По правому прямоугольнику: {resR}")
     
 def main():
-    a = float(input("Введите нижний интервал: "))
-    b = float(input("Введите верхний интервал: "))
-    n = float(input("Введите количество точек: "))
-    rect(a,b,(b-a)/(n-1))
+    rect(float(input("Введите нижний интервал: ")),float(input("Введите верхний интервал: ")),float(input("Введите количество точек: ")))
+
 
 if(__name__ == "__main__"):
     main()
