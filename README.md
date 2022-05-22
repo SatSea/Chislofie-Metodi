@@ -1,6 +1,6 @@
 # :dragon: Chislofie-Metodi :dragon:
 
-Примерная реализация заданий численных методов на языке Python :snake:
+:snake:Примерная реализация заданий численных методов на языке Python:snake:
 
 :monkey: Code done by:  @SatSea :frog:
 
