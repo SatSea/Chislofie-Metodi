@@ -13,10 +13,7 @@ def function(x):
     return math.cos(x)-12*(x**3)
 
 def main():
-    a = float(input("Введите нижний интервал: "))
-    b = float(input("Введите верхний интервал: "))
-    n = float(input("Введите количество точек: "))
-    print("Ответ равен: " + str(trap(a,b,n)))
+   print("Ответ равен: " + str(trap(float(input("Введите нижний интервал: ")),float(input("Введите верхний интервал: ")),float(input("Введите количество точек: "))))
 
 if(__name__ == "__main__"):
     main()
